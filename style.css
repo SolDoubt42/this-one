@@ -22,8 +22,9 @@
     font-family: "Poppins", serif;
     font-weight: 700;
     font-style: normal;
-    
+    font-size: var(--biggest-font-size);
     margin-bottom: 1.5rem;
+    
   }
 
 *, ::before, ::after {
