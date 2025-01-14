@@ -18,6 +18,13 @@
     --z-fixed: 100;
     --z-modal: 1000;
 }
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+    margin-bottom: 1.5rem;
+  }
 
 *, ::before, ::after {
     box-sizing: border-box;
