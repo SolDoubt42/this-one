@@ -87,6 +87,9 @@ img {
     font-family: "Poppins", serif;
     color: var(--first-color);
     font-weight: 700;
+    max-width: 88px;  /* set a maximum width */
+  height: auto;      /* preserve the aspect ratio */
+
 }
 
 .nav-toggle {
