@@ -18,14 +18,14 @@
     --z-fixed: 100;
     --z-modal: 1000;
 }
+
 .poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 1700;
+    font-family: "Poppins", serif;    /* As in original code */
+    font-weight: 1700;               /* As in original code */
     font-style: normal;
     font-size: var(--biggest-font-size);
     margin-bottom: 1.5rem;
-    
-  }
+}
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -77,9 +77,11 @@ img {
 }
 
 .nav-item { margin-bottom: 1.5rem; }
-.nav-link { color: var(--first-color);
-    font-family: "Poppins", serif; }
-    .nav-link:hover { color: var(--second-color); }
+.nav-link { 
+    color: var(--first-color);
+    font-family: "Poppins", serif;   /* As in original code */
+}
+.nav-link:hover { color: var(--second-color); }
 
 .nav-logo {
     font-family: "Poppins", serif;
@@ -92,8 +94,7 @@ img {
     cursor: pointer;
     margin-right: 1rem;
 }
-
-    .nav-toggle img { width: 1.8rem; }
+.nav-toggle img { width: 1.8rem; }
 
 .nav-btn {
     background-color: var(--second-color);
@@ -139,12 +140,11 @@ img {
     align-items: center;
     justify-content: center;
 }
-
-    .home-img img {
-        width: 281px;
-        height: 177px;
-        margin-right: 1rem;
-    }
+.home-img img {
+    width: 281px;
+    height: 177px;
+    margin-right: 1rem;
+}
 
 .home-scroll {
     grid-area: scroll;
@@ -161,17 +161,15 @@ img {
 
 .home-scroll-item { width: 2rem; }
 
-
 .airpod1 { animation: airpod1 3s infinite; }
 .airpod2 { animation: airpod2 3s infinite; }
 
-    @keyframes airpod1 {
-        50% { transform: translateY(-6%); }
-    }
-
-    @keyframes airpod2 {
-        50% { transform: translateY(-6%); }
-    }
+@keyframes airpod1 {
+    50% { transform: translateY(-6%); }
+}
+@keyframes airpod2 {
+    50% { transform: translateY(-6%); }
+}
 
 /*L-SECTION*/
 
@@ -188,34 +186,35 @@ img {
     margin-bottom: 2.5rem;
     text-align: center;
 }
-
-.details-initial { font-size: var(--smaller-font-size); 
-    font-family: "Poppins", serif; }
-
+.details-initial { 
+    font-size: var(--smaller-font-size); 
+    font-family: "Poppins", serif; 
+}
 .details-title {
     font-size: var(--bigger-font-size);
     font-weight: 400;
     font-family: "Poppins", serif;
 }
-
-    .details-title span { font-size: var(--big-font-size); }
-
-.details-description { font-size: var(--normal-font-size);
-    font-family: "Poppins", serif; }
+.details-title span { font-size: var(--big-font-size); }
+.details-description { 
+    font-size: var(--normal-font-size);
+    font-family: "Poppins", serif; 
+}
 
 .details-img {
     width: max-content;
     align-self: center;
 }
-
-    .details-img img { width: 218px; }
+.details-img img { width: 218px; }
 
 .airpods { animation: airpods 3s infinite; }
+@keyframes airpods {
+    50% { transform: translateY(-6%); }
+}
 
-    @keyframes airpods {
-        50% { transform: translateY(-6%); }
-    }
+/* Media Queries */
 
+/* ---------- MAX-WIDTH: 768px ---------- */
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -229,10 +228,43 @@ img {
         border-bottom: 1px solid gray;
         transition: .5s;
     }
-
     .show { top: 3rem; }
+
+    /* Force a single-column layout on small screens */
+    .home {
+        display: flex;           
+        flex-direction: column;  
+        align-items: center;     
+        justify-content: center; 
+        height: auto;            /* Let content dictate height */
+        margin-bottom: 2rem;     /* Some spacing if desired */
+    }
+
+    .home-img {
+        display: block;         /* Let the image section stack */
+        height: auto;
+        margin: 1rem auto; 
+    }
+    .home-img img {
+        width: 80%;            /* Adjust as needed */
+        height: auto;
+        margin: 0 auto;        /* Center in parent */
+        display: block;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;           /* Let content dictate height */
+    }
+    .details-img {
+        margin: 1rem auto;
+    }
 }
 
+/* ---------- MIN-WIDTH: 768px ---------- */
 @media screen and (min-width: 768px) {
     :root {
         --biggest-font-size: 8rem;
@@ -259,30 +291,19 @@ img {
 
     .home {
         height: 100vh;
-        -ms-grid-columns: min-content;
-        grid-template-columns: -webkit-min-content;
         grid-template-columns: min-content;
-        -ms-grid-rows: 80% 10%;
         grid-template-rows: 80% 10%;
         grid-template-areas: "data img" "scroll scroll";
-        -ms-flex-line-pack: end;
         align-content: flex-end;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-column-gap: 4rem;
         column-gap: 4rem;
     }
 
     .home-data {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
         grid-area: data;
-        padding: 0;
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
         text-align: initial;
+        padding: 0;
     }
 
     .home-description { 
@@ -292,43 +313,30 @@ img {
 
     .home-img {
         height: calc(100vh - 2rem);
-    display: grid;
-    grid-template-columns: max-content max-content;
-    align-items: center;
-    justify-content: center;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-img img {
+        width: 576px;
+        height: 446px;
     }
 
-        .home-img img {
-            width: 576px;
-            height: 446px;
-        }
-
     .home-scroll {
-        -ms-grid-row: 2;
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
         grid-area: scroll;
         padding-bottom: 2rem;
     }
 
     .details {
-        -webkit-column-gap: 4rem;
         column-gap: 4rem;
     }
-
     .details-box { margin-bottom: 2rem; }
-
-    .details-img {
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    }
-
-        .details-img img {
-            width: 300px;
-        }
+    .details-img { align-self: center; }
+    .details-img img { width: 300px; }
 }
 
+/* ---------- MIN-WIDTH: 1200px ---------- */
 @media screen and (min-width: 1200px) {
     .bd-grid {
         margin-left: auto;
