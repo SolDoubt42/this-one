@@ -84,10 +84,10 @@ img {
 .nav-link:hover { color: var(--second-color); }
 
 .nav-logo {
-    font-family: "Poppins", serif;
-    color: var(--first-color);
-    font-weight: 700;
-    max-width: 88px;  /* set a maximum width */
+   /* font-family: "Poppins", serif;
+    color: var(--first-color);  
+    font-weight: 700;*/ 
+    max-width: 55px;  /* set a maximum width */
   height: auto;      /* preserve the aspect ratio */
 
 }
