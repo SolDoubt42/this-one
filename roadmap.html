@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolCage Roadmap</title>
+
+  <!-- Reuse your existing CSS for consistent styling -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Same font imports as your original page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- 
+    OPTIONAL: Inline custom CSS to enhance the "phases" layout 
+    for a cleaner, Apple-inspired look. Alternatively, add 
+    these rules in your style.css instead.
+  -->
+  <style>
+    /* 
+      Minimal, clean, Apple-inspired design for the roadmap.
+      Adjust values to match your brand’s look. 
+    */
+
+    /* Main roadmap title - big, bold, centered */
+    .roadmap-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 3rem;      /* Large heading */
+      font-weight: 600; 
+      text-align: center;
+      margin-bottom: 1rem; 
+    }
+
+    .roadmap-description {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #6e6e73;       /* A subtle gray, Apple-style */
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;  /* Center and add spacing below */
+    }
+
+    /* Container for the phases */
+    .phases-container {
+      display: grid;
+      gap: 2rem; 
+      margin-top: 2rem;
+    }
+
+    /* Each phase block with a subtle background, rounded corners, padding */
+    .phase-box {
+      background-color: #f5f5f7; /* Apple-esque light gray */
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 0 auto; /* Center if you like, or remove for full width */
+      max-width: 800px; 
+    }
+
+    /* Phase heading - slightly smaller than main heading but still bold */
+    .phase-box h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem; 
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1d1d1f; /* Dark text */
+    }
+
+    /* Subhead or initial line (e.g., "Phase 1") */
+    .phase-heading {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      color: #6e6e73;
+    }
+
+    /* Body text within each phase */
+    .phase-box p {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1rem; /* Space between paragraphs */
+    }
+
+    /* Bold highlights for "Goal:" or other important text */
+    .phase-box strong {
+      font-weight: 600;
+      color: #1d1d1f;
+    }
+
+    /* Summary timeline box - same style as phases, or adjust as needed */
+    .summary-timeline {
+      background-color: #f5f5f7;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px; 
+    }
+
+    /* For the summary heading */
+    .summary-timeline h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1d1d1f;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========= Header (copied from your main page) ========= -->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <!-- Adjust the href to link back to your main homepage -->
+      <a href="index.html" class="nav-logo">SolCage</a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <!-- Link back to original sections or remove if not needed -->
+          <li class="nav-item">
+            <a href="index.html#l-main" class="nav-link">Description</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#l-section" class="nav-link">Specifications</a>
+          </li>
+          <!-- Current page (Roadmap) link -->
+          <li class="nav-item">
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <div class="nav-toggle" id="nav-toggle">
+          <img
+            src="https://i.postimg.cc/zGFxhLRv/bx-chevron-down.png"
+            alt="menu-icon"
+          />
+        </div>
+        <a href="#" class="nav-btn">PumpFun</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========= MAIN CONTENT: Updated Title & Apple-Inspired Layout ========= -->
+  <main class="l-main bd-grid" style="margin-top: 5rem;">
+    <!-- Roadmap Intro -->
+    <div class="roadmap-title">Roadmap</div>
+    <div class="roadmap-description">
+      This roadmap outlines the strategic milestones for the design, production, 
+      and scaling of SolCage, aligned with achieving specific market capitalization 
+      targets: $10M, $30M, $50M, and $100M.
+    </div>
+
+    <!-- Phases Container -->
+    <section class="phases-container">
+      <!-- =========== PHASE 1 =========== -->
+      <div class="phase-box">
+        <div class="phase-heading">Phase 1</div>
+        <h3>Concept and Initial Development (Up to $10M Market Cap)</h3>
+        <p><strong>Goal:</strong> Validate the concept, develop prototypes, and establish foundational partnerships.</p>
+        <p>
+          <strong>Research and Development:</strong><br>
+          • Conduct user research to refine product features.<br>
+          • Develop a proof-of-concept prototype for SolCage, focusing on hardware wallet functionality and the physical locking mechanism.<br>
+          • Implement basic syncing functionality with Phantom wallet.
+        </p>
+        <p>
+          <strong>Initial Branding and Community Building:</strong><br>
+          • Launch marketing campaigns targeting crypto and trading communities.<br>
+          • Build an online presence through social media, forums, and influencer partnerships.
+        </p>
+        <p>
+          <strong>Pilot Testing:</strong><br>
+          • Distribute prototypes to early adopters for feedback.<br>
+          • Refine design based on user insights.
+        </p>
+        <p>
+          <strong>Seed Funding Campaign:</strong><br>
+          • Launch crowdfunding or token-based campaigns to secure initial capital.
+        </p>
+      </div>
+
+      <!-- =========== PHASE 2 =========== -->
+      <div class="phase-box">
+        <div class="phase-heading">Phase 2</div>
+        <h3>Product Launch and Scaling (Up to $30M Market Cap)</h3>
+        <p><strong>Goal:</strong> Launch the first production-ready version and expand user base.</p>
+        <p>
+          <strong>Design Finalization:</strong><br>
+          • Complete industrial design of SolCage for aesthetics, comfort, and durability.<br>
+          • Integrate advanced biometric security for the hardware wallet.
+        </p>
+        <p>
+          <strong>Production and Distribution:</strong><br>
+          • Partner with manufacturing facilities to produce the first 10,000 units.<br>
+          • Establish logistics for global distribution.
+        </p>
+        <p>
+          <strong>Software Development:</strong><br>
+          • Finalize and test the SolCage app for mobile and desktop, ensuring smooth integration with Phantom wallet.<br>
+          • Add real-time portfolio tracking and detailed performance metrics for trading.
+        </p>
+        <p>
+          <strong>Go-to-Market Strategy:</strong><br>
+          • Launch the product with a targeted marketing campaign.<br>
+          • Collaborate with crypto trading platforms to promote SolCage.
+        </p>
+      </div>
+
+      <!-- =========== PHASE 3 =========== -->
+      <div class="phase-box">
+        <div class="phase-heading">Phase 3</div>
+        <h3>Market Expansion and Feature Enhancement (Up to $50M Market Cap)</h3>
+        <p><strong>Goal:</strong> Scale production, enhance features, and diversify the product ecosystem.</p>
+        <p>
+          <strong>Product Iteration:</strong><br>
+          • Introduce additional unlock criteria, such as customizable goals or multi-day performance tracking.<br>
+          • Develop alternative designs for broader user appeal.
+        </p>
+        <p>
+          <strong>Ecosystem Expansion:</strong><br>
+          • Integrate with other popular crypto wallets (e.g., MetaMask, Ledger).<br>
+          • Launch a companion analytics platform for in-depth portfolio and trading performance insights.
+        </p>
+        <p>
+          <strong>Marketing and Partnerships:</strong><br>
+          • Expand partnerships with crypto exchanges, trading platforms, and influencers.<br>
+          • Launch educational content and gamified challenges to engage the community.
+        </p>
+        <p>
+          <strong>Regional Expansion:</strong><br>
+          • Adapt marketing strategies for key regions, including Asia, Europe, and the Americas.
+        </p>
+      </div>
+
+      <!-- =========== PHASE 4 =========== -->
+      <div class="phase-box">
+        <div class="phase-heading">Phase 4</div>
+        <h3>Global Dominance and Diversification (Up to $100M Market Cap)</h3>
+        <p><strong>Goal:</strong> Position SolCage as a global leader in the hardware wallet and performance accountability space.</p>
+        <p>
+          <strong>Mass Production and Customization:</strong><br>
+          • Scale production to meet global demand with reduced manufacturing costs.<br>
+          • Offer customizable options (e.g., color, materials, branding).
+        </p>
+        <p>
+          <strong>Advanced Features:</strong><br>
+          • Introduce AI-driven trading insights and coaching tools within the SolCage app.<br>
+          • Enable multi-wallet support and portfolio synchronization across diverse assets.
+        </p>
+        <p>
+          <strong>Branding and Community Leadership:</strong><br>
+          • Host international events and competitions centered around trading performance and accountability.<br>
+          • Develop a premium membership program with exclusive features and benefits.
+        </p>
+        <p>
+          <strong>New Product Lines:</strong><br>
+          • Explore additional connected products focused on motivation and gamification (e.g., fitness tracking integrations).<br>
+          • Launch a sleek, minimalist version of SolCage for broader appeal.
+        </p>
+        <p>
+          <strong>Corporate Partnerships:</strong><br>
+          • Collaborate with financial institutions, blockchain projects, and trading platforms for deeper integrations and co-branded products.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Summary Timeline Section (Optional) ===== -->
+    <div class="summary-timeline">
+      <h3>Summary Timeline</h3>
+      <p>
+        <strong>$10M Market Cap:</strong> Proof of concept, early adopters, foundational production.
+      </p>
+      <p>
+        <strong>$30M Market Cap:</strong> First product launch, ecosystem establishment, scaling.
+      </p>
+      <p>
+        <strong>$50M Market Cap:</strong> Feature expansion, broader integrations, regional growth.
+      </p>
+      <p>
+        <strong>$100M Market Cap:</strong> Global presence, diversification, and industry leadership.
+      </p>
+      <p>
+        <strong>Vision:</strong> Transform SolCage from a niche product into a cultural phenomenon 
+        that bridges the worlds of personal accountability, gamification, and crypto security.
+      </p>
+    </div>
+  </main>
+
+  <!-- If you have JavaScript for nav toggling or animations, keep them -->
+  <script src="main.js"></script>
+</body>
+</html>
